@@ -13,7 +13,7 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 - Restrict domains where the video can be embedded.
 - Build a web application with authentication to access the channels using the APIs provided by Watson Media. 
 
-## Flow
+### Flow
 
 ![architecture](doc/source/images/architecture.png)
 
@@ -45,7 +45,7 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 * [Restrict Domains where video can be embedded.]()
 * [Build a web appplication using Channel API.]()
 
-### Login using IBMID on IBM Watson Media.
+#### Login using IBMID on IBM Watson Media.
 If you don't have IBM ID,  create an account on IBM Cloud Account 
 - Login to [IBM CLOUD](https://cloud.ibm.com/login).
 
@@ -55,7 +55,7 @@ using the same ID,
 
 ![Dashboard](doc/src/images/Dashboard.png)
 
-### Create the Channels.
+#### Create the Channels.
 * Click on `Create Channel`.
   ```
   Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
@@ -64,12 +64,14 @@ using the same ID,
 * Select the `Language` from the dropdown 
 * Hit `Create` button. 
 
-![Create Channel](doc/src/images/createChannel.png =200*200)
+<img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="200" height="200" />
+<!-- ![Create Channel](doc/src/images/createChannel.png)-->
 
 * To View `Channel Page`, click on the `view Channel Page`
+
 ![View Channel](doc/src/images/viewChannel.png)
 
-### Upload Videos on the Channel.
+#### Upload Videos on the Channel.
 * Click on `Videos Button` on the left-hand side Dashboard. 
 * Click `upload` button.
 * Select all the files you want to upload from the computer and click `open`.
