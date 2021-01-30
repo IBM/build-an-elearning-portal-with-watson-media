@@ -66,7 +66,9 @@ using the same ID,
 
 ![Create Channel](doc/source/images/createChannel.png)
 
-* To View `Channel Page`, click on the 
+* To View `Channel Page`, click on the `view Channel Page`
+
+![View Channel](doc/source/images/viewChannel.png)
 
 ### Upload Videos on the Channel.
 * Click on `Videos Button` on the left-hand side Dashboard. 
@@ -78,6 +80,7 @@ using the same ID,
 ![Watch this Gif](doc/src/images/upload.gif)
 
 ### Create Playlists.
+* Click on `Playlists Button` on the left-hand side Dashboard. 
 
 ### Give Password Restriction on the Channel.
 ### Restrict Domains where video can be embedded.
