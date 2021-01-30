@@ -64,7 +64,7 @@ using the same ID,
 * Select the `Language` from the dropdown 
 * Hit `Create` button. 
 
-![Create Channel](doc/src/images/createChannel.png)
+![Create Channel](doc/src/images/createChannel.png =100x100)
 
 * To View `Channel Page`, click on the `view Channel Page`
 ![View Channel](doc/src/images/viewChannel.png)
