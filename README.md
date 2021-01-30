@@ -12,3 +12,74 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 - Password restrict the access to videos.
 - Restrict domains where the video can be embedded.
 - Build a web application with authentication to access the channels using the APIs provided by Watson Media. 
+
+## Flow
+
+![architecture](doc/source/images/architecture.png)
+
+1. 
+1. 
+1. 
+1. 
+
+# Included components
+
+* [IBM Watson Media](https://www.ibm.com/watson/media): It offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management.
+
+# Featured technologies
+
+* [Node.js](https://nodejs.org/en/): An asynchronous event driven JavaScript runtime, designed to build scalable applications
+* [React](https://reactjs.org/): Javascript library for building User Interfaces
+
+
+# Watch the Video
+
+[![]()
+
+## Steps
+* [Login using IBMID on IBM Watson Media.]()
+* [Create the Channels.]()
+* [Upload Videos on the Channel.]()
+* [Create Playlists.]()
+* [Give Password Restriction on the Channel.]()
+* [Restrict Domains where video can be embedded.]()
+* [Build a web appplication using Channel API.]()
+
+### Login using IBMID on IBM Watson Media.
+If you don't have IBM ID,  create an account on IBM Cloud Account 
+- Login to [IBM CLOUD](https://cloud.ibm.com/login).
+
+using the same ID, 
+* Click on Free Trial on [Watson Media Page](https://www.ibm.com/watson/media/services)
+* Login using IBM ID. Your 30 days free trial of the product will be activated. 
+
+![Dashboard](doc/source/images/Dashboard.png)
+
+### Create the Channels.
+* Click on `Create Channel`.
+  ```
+  Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
+  ```
+* Give the `Channel Name.` 
+* Select the `Language` from the dropdown 
+* Hit `Create` button. 
+
+![Create Channel](doc/source/images/createChannel.png)
+
+* To View `Channel Page`, click on the 
+
+### Upload Videos on the Channel.
+* Click on `Videos Button` on the left-hand side Dashboard. 
+* Click `upload` button.
+* Select all the files you want to upload from the computer and click `open`.
+* Click `Start to Upload` Button. 
+* After the upload is complete, Go back to Dashboard, under Videos section, Select all the uploaded videos and Hit Publish. 
+    
+![Watch this Gif](doc/src/images/upload.gif)
+
+### Create Playlists.
+
+### Give Password Restriction on the Channel.
+### Restrict Domains where video can be embedded.
+### Build a web appplication using Channel API.
+
