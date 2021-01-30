@@ -81,6 +81,12 @@ using the same ID,
 ![Watch this Gif](doc/src/images/upload.gif)
 
 #### 4. Create Playlists.
+* Click on `Playlist Button` on the left-hand side Dashboard. 
+* Click `Create Playlist` button.
+* Give Playlist Name
+* Add Videos to the playlist and Hit `create button` 
+
+![Watch this Gif](doc/src/images/playlist.gif)
 
 #### 5. Give Password Restriction on the Channel.
 #### 6. Restrict Domains where video can be embedded.
