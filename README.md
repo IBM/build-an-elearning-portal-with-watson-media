@@ -22,30 +22,30 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 1. 
 1. 
 
-# Included components
+### Included components
 
 * [IBM Watson Media](https://www.ibm.com/watson/media): It offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management.
 
-# Featured technologies
+### Featured technologies
 
 * [Node.js](https://nodejs.org/en/): An asynchronous event driven JavaScript runtime, designed to build scalable applications
 * [React](https://reactjs.org/): Javascript library for building User Interfaces
 
 
-# Watch the Video
+### Watch the Video
 
 [![]()
 
-## Steps
-* [Login using IBMID on IBM Watson Media.]()
-* [Create the Channels.]()
-* [Upload Videos on the Channel.]()
-* [Create Playlists.]()
-* [Give Password Restriction on the Channel.]()
-* [Restrict Domains where video can be embedded.]()
-* [Build a web appplication using Channel API.]()
+### Steps
+1. [Login using IBMID on IBM Watson Media.]()
+1. [Create the Channels.]()
+1. [Upload Videos on the Channel.]()
+1. [Create Playlists.]()
+1. [Give Password Restriction on the Channel.]()
+1. [Restrict Domains where video can be embedded.]()
+1. [Build a web appplication using Channel API.]()
 
-#### Login using IBMID on IBM Watson Media.
+#### 1. Login using IBMID on IBM Watson Media.
 If you don't have IBM ID,  create an account on IBM Cloud Account 
 - Login to [IBM CLOUD](https://cloud.ibm.com/login).
 
@@ -55,7 +55,7 @@ using the same ID,
 
 <img src="doc/src/images/Dashboard.png" alt="Dashboard " title="dashboard" width="800" height="500" />
 
-#### Create the Channels.
+#### 2. Create the Channels.
 * Click on `Create Channel`.
   ```
   Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
@@ -71,7 +71,7 @@ using the same ID,
 
 <img src="doc/src/images/viewChannel.png" alt="view Channel " title="view Channel" width="800" height="500" />
 
-#### Upload Videos on the Channel.
+#### 3. Upload Videos on the Channel.
 * Click on `Videos Button` on the left-hand side Dashboard. 
 * Click `upload` button.
 * Select all the files you want to upload from the computer and click `open`.
@@ -80,9 +80,9 @@ using the same ID,
     
 ![Watch this Gif](doc/src/images/upload.gif)
 
-### Create Playlists.
+#### 4. Create Playlists.
 
-### Give Password Restriction on the Channel.
-### Restrict Domains where video can be embedded.
-### Build a web appplication using Channel API.
+#### 5. Give Password Restriction on the Channel.
+#### 6. Restrict Domains where video can be embedded.
+#### 7. Build a web appplication using Channel API.
 
