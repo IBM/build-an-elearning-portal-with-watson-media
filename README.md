@@ -64,7 +64,7 @@ using the same ID,
 * Select the `Language` from the dropdown 
 * Hit `Create` button. 
 
-<img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="200" height="200" />
+<img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="500" height="500" />
 <!-- ![Create Channel](doc/src/images/createChannel.png)-->
 
 * To View `Channel Page`, click on the `view Channel Page`
