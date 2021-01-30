@@ -53,7 +53,7 @@ using the same ID,
 * Click on Free Trial on [Watson Media Page](https://www.ibm.com/watson/media/services)
 * Login using IBM ID. Your 30 days free trial of the product will be activated. 
 
-![Dashboard](doc/src/images/Dashboard.png)
+<img src="doc/src/images/Dashboard.png" alt="Dashboard " title="dashboard" width="800" height="500" />
 
 #### Create the Channels.
 * Click on `Create Channel`.
@@ -65,11 +65,11 @@ using the same ID,
 * Hit `Create` button. 
 
 <img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
-<!-- ![Create Channel](doc/src/images/createChannel.png)-->
+
 
 * To View `Channel Page`, click on the `view Channel Page`
 
-![View Channel](doc/src/images/viewChannel.png)
+<img src="doc/src/images/viewChannel.png" alt="view Channel " title="view Channel" width="800" height="500" />
 
 #### Upload Videos on the Channel.
 * Click on `Videos Button` on the left-hand side Dashboard. 
