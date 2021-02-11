@@ -15,12 +15,14 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 
 ### Flow
 
-![architecture](doc/source/images/architecture.png)
+![architecture](doc/src/images/architecture.png)
 
-1. 
-1. 
-1. 
-1. 
+1. Admin requets to authorizes app in `/admin`
+1. App redirects admin to IBM OAuth2.0 portal.
+1. Node Server receives Auth token from Watson Media.
+1. App requests server for the auth token
+1. App uses auth token to create dashboard for user on runtime.
+1. User logs in and accesses content.
 
 ### Included components
 
@@ -44,8 +46,14 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 1. [Give Password Restriction on the Channel.]()
 1. [Restrict Domains where video can be embedded.]()
 1. [Build a web appplication using Channel API.]()
+  1. [Generate Channel API credentials]()
+  1. [Build React UI]()
+  1. [Move build to node directory.]()
+  1. [Install Node modules.]()
+  1. [Deploy the Application.]()
+  
 
-#### 1. Login using IBMID on IBM Watson Media.
+## 1. Login using IBMID on IBM Watson Media.
 If you don't have IBM ID,  create an account on IBM Cloud Account 
 - Login to [IBM CLOUD](https://cloud.ibm.com/login).
 
@@ -55,7 +63,7 @@ using the same ID,
 
 <img src="doc/src/images/Dashboard.png" alt="Dashboard " title="dashboard" width="800" height="500" />
 
-#### 2. Create the Channels.
+## 2. Create the Channels.
 * Click on `Create Channel`.
   ```
   Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
@@ -69,9 +77,7 @@ using the same ID,
 
 * To View `Channel Page`, click on the `view Channel Page`
 
-<img src="doc/src/images/viewChannel.png" alt="view Channel " title="view Channel" width="800" height="500" />
-
-#### 3. Upload Videos on the Channel.
+## 3. Upload Videos on the Channel.
 * Click on `Videos Button` on the left-hand side Dashboard. 
 * Click `upload` button.
 * Select all the files you want to upload from the computer and click `open`.
@@ -80,7 +86,7 @@ using the same ID,
     
 ![Watch this Gif](doc/src/images/upload.gif)
 
-#### 4. Create Playlists.
+## 4. Create Playlists.
 * Click on `Playlist Button` on the left-hand side Dashboard. 
 * Click `Create Playlist` button.
 * Give Playlist Name
@@ -88,9 +94,133 @@ using the same ID,
 
 ![Watch this Gif](doc/src/images/playlist.gif)
 
-#### 5. Give Password Restriction on the Channel.
-#### 6. Restrict Domains where video can be embedded.
-#### 7. Build a web appplication using Channel API.
+## 5. Give Password Restriction on the Channel.
+* On the Dashboard, Click on `Security` Tab on the left-side panel.
+* Click on `Password Protection`
+* Checkmark the `Enable Password Protection` button.
+* Give the Channel Password of your choice and hit `save`. 
+
+<img src="doc/src/images/password.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
+
+## 6. Restrict Domains where video can be embedded.
+* On the Dashboard, Click on `Security` Tab on the left-side panel.
+* Click on `Embed Restriction`
+* Checkmark the `specify the domains where your streams can be embedded ` button.
+* Give the domains where you want to allow or restrict and hit `save`. 
+
+<img src="doc/src/images/restrictembed.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
+
+## 7. Build a web appplication using Channel API.
+  ### 7.1 Generate Channel API credentials
+  * On Watson Media, Try it for free, sign up and get to the developers dashboard.
+  * From the left navigation bar click on **API/SDK Access**.
+  * Click **Create New Credentials** to create Channel API credentials.
+  * Enter a **Application Name** as per choice.
+  * Enter http://localhost:8080/get_token as the Redirect URL.
+  * Select **Web Application** from the radio as the application type.
+  * Click Save and copy the **Client ID**.
+
+  ### 7.2 Build React UI
+  Go to the directory on your local system where you cloned the repository and go inside the `React UI` folder and run the following command on your terminal.
+  ```bash
+  npm run build
+  ```
+
+  ### 7.3 Move build to node directory
+  After creating the react build run the following command in your terminal in the same directory as the build folder.
+  ```bash
+  mv ./build ./../
+  ```
+  ### 7.4 Install Node Modules
+  Inside the folder `watson-media-node` run the following command
+  ```bash
+  npm install
+  ```
+
+   ### 7.5 Deploy the Application
+  <details><summary><b>Deploy Locally</b></summary>
+
+  * After node modules have been installed run the following command 
+  ```bash
+  node server.js
+  ```
+  After this the application is listening on http://localhost:8080/
+
+  * Open your Web Browser and visit http://localhost:8080 .You will be redirected to http://localhost:8080/admin . Here enter the Client ID that you previously copied. and click **Authorize.**
+  ![admin_auth](doc/src/images/admin_auth.png)
+
+  * This will redirect you to Watson Media OAuth and you will be required to login with your W3, UStream or Device Credentials. After logging in, click **Authorize.**
+  ![admin_oauth](doc/src/images/admin_oauth.png)
+  ![authorize](doc/src/images/authorize.png)
+
+  * Successful Authentication will redirect you to http://localhost:8080/login . 
+  Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in `React UI/src/content/sampleLogin.json`.
+  Look them up and enter it in the text boxes on `/login` and click Login.
+  ![login](doc/src/images/login.png)
+
+  * After successfully logging in you can now view the different channels and videos and playlists uploaded in them.
+  ![dash](doc/src/images/dash.png)
+  ![videos](doc/src/images/videos.png)
+
+
+  </details>
+  <details><summary><b>Deploy on Kubernetes</b></summary>
+
+  #### 7.5.1 Create a free Kubernetes Cluster on IBM Cloud
+
+  * Create a free Kubernetes Cluster Account on https://cloud.ibm.com/kubernetes/catalog/create
+  ![kubernetes](doc/src/images/kubernetes.png)
+
+  * Connect your terminal to IBM Cloud using the following commands
+  ![kubernetes steps](doc/src/images/cloud_steps.png)
+
+  * Click on worker nodes in the left navigation bar and copy your public IP.
+  ![workernodes](doc/src/images/worker_nodes.png)
+
+
+
+  #### 7.5.2 Build and push Docker Image to Docker Hub.
+  * Inside the directory `watson-media-node` run the following command
+  ```bash
+  docker build -t <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG> .
+  ```
+
+  The command should look like this
+  ```bash
+  docker build -t randomUser/watson-media-node:v2 .
+  ```
+
+  * After docker image is built, push it to docker hub using the following command
+  ```bash
+  docker push <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG> 
+  ```
+
+  * Inside the directory `watson-media-node`, change `deploy.yaml` file replace line no. 17 to
+  ```bash
+  image : <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG>
+  ```
+  It should look something like this 
+  ```bash
+  image: randomUser/watson-node-elearning:v2
+  ```
+
+  #### 7.5.3 Deploy on Kubernetes
+
+  * Next run the following command to deploy the image to kubernetes.
+  ```bash
+  kubectl apply -f deploy.yaml
+  ```
+  The Application is now running on your kubernetes node.
+
+  * Go to your Watson Media API/SDK Access Dashboard and change the Redirect URL to http://<YOUR_KUBERNETES_NODE_PUBLIC_IP>:32423/get_token
+
+  ![channelAPI](doc/src/images/channelAPI.png)
+
+
+  >NOTE: We have entered **32423** as this is the one that we have exposed in out `deploy.yaml` file.
+
+  </details>
+
 
 ## License
 
