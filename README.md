@@ -39,18 +39,18 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 [![]()
 
 ### Steps
-1. [Login using IBMID on IBM Watson Media.]()
-1. [Create the Channels.]()
-1. [Upload Videos on the Channel.]()
-1. [Create Playlists.]()
-1. [Give Password Restriction on the Channel.]()
-1. [Restrict Domains where video can be embedded.]()
-1. [Build a web appplication using Channel API.]()
-    * 7.1 [Generate Channel API credentials]()
-    * 7.2 [Build React UI]()
-    * 7.3 [Move build to node directory.]()
-    * 7.4 [Install Node modules.]()
-    * 7.5 [Deploy the Application.]()
+1. [Login using IBMID on IBM Watson Media.](#1-login-using-ibmid-on-ibm-watson-media)
+1. [Create the Channels.](#2-create-the-channels)
+1. [Upload Videos on the Channel.](#3-upload-videos-on-the-channel)
+1. [Create Playlists.](#4-create-playlists)
+1. [Give Password Restriction on the Channel.](#5-give-password-restriction-on-the-channel)
+1. [Restrict Domains where video can be embedded.](#6-restrict-domains-where-video-can-be-embedded)
+1. [Build a web appplication using Channel API.](#7-build-a-web-appplication-using-channel-api)
+    * 7.1 [Generate Channel API credentials](#71-generate-channel-api-credentials)
+    * 7.2 [Build React UI](#72-build-react-ui)
+    * 7.3 [Move build to node directory.](#73-move-build-to-node-directory)
+    * 7.4 [Install Node modules.](#74-install-node-modules)
+    * 7.5 [Deploy the Application.](#75-deploy-the-application)
 
 
 ## 1. Login using IBMID on IBM Watson Media.
