@@ -46,12 +46,11 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 5. [Give Password Restriction on the Channel.]()
 6. [Restrict Domains where video can be embedded.]()
 7. [Build a web appplication using Channel API.]()
-
-              1. [Generate Channel API credentials]()
-              2. [Build React UI]()
-              3. [Move build to node directory.]()
-              4. [Install Node modules.]()
-              5. [Deploy the Application.]()
+            1. [Generate Channel API credentials]()
+            2. [Build React UI]()
+            3. [Move build to node directory.]()
+            4. [Install Node modules.]()
+            5. [Deploy the Application.]()
 
 
 ## 1. Login using IBMID on IBM Watson Media.
