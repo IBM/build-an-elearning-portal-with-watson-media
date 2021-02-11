@@ -39,7 +39,7 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 
 ### Watch the Video
 
-[![]()
+[![Watch the Application Demo Here](http://i3.ytimg.com/vi/dcW0lAgpQ_I/hqdefault.jpg)](https://youtu.be/dcW0lAgpQ_I)
 
 ### Steps
 1. [Login using IBMID on IBM Watson Media.](#1-login-using-ibmid-on-ibm-watson-media)
