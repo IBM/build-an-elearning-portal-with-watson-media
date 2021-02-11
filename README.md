@@ -18,7 +18,7 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 
 ![architecture](doc/src/images/architecture.png)
 
-1. Admin requets to authorizes app in `/admin`
+1. Admin requests to authorizes app in `/admin`
 2. App redirects admin to IBM OAuth2.0 portal.
 3. Node Server receives Auth token from Watson Media.
 4. App requests server for the auth token
@@ -28,11 +28,13 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 ### Included components
 
 * [IBM Watson Media](https://www.ibm.com/watson/media): It offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management.
+* [Kubernetes](https://cloud.ibm.com/kubernetes/catalog/create): IBM Cloud Kubernetes Service creates a cluster of compute hosts and deploys highly available containers. A Kubernetes cluster lets you securely manage the resources that you need to quickly deploy, update, and scale applications.
 
 ### Featured technologies
 
 * [Node.js](https://nodejs.org/en/): An asynchronous event driven JavaScript runtime, designed to build scalable applications
 * [React](https://reactjs.org/): Javascript library for building User Interfaces
+* [Docker](https://www.docker.com/why-docker): Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
 
 ### Watch the Video
