@@ -18,11 +18,11 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 ![architecture](doc/src/images/architecture.png)
 
 1. Admin requets to authorizes app in `/admin`
-1. App redirects admin to IBM OAuth2.0 portal.
-1. Node Server receives Auth token from Watson Media.
-1. App requests server for the auth token
-1. App uses auth token to create dashboard for user on runtime.
-1. User logs in and accesses content.
+2. App redirects admin to IBM OAuth2.0 portal.
+3. Node Server receives Auth token from Watson Media.
+4. App requests server for the auth token
+5. App uses auth token to create dashboard for user on runtime.
+6. User logs in and accesses content.
 
 ### Included components
 
