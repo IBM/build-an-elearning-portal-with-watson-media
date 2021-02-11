@@ -46,6 +46,7 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 5. [Give Password Restriction on the Channel.]()
 6. [Restrict Domains where video can be embedded.]()
 7. [Build a web appplication using Channel API.]()
+   
    7.1 [Generate Channel API credentials]()
    7.2 [Build React UI]()
    7.3 [Move build to node directory.]()
