@@ -40,17 +40,17 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 
 ### Steps
 1. [Login using IBMID on IBM Watson Media.]()
-2. [Create the Channels.]()
-3. [Upload Videos on the Channel.]()
-4. [Create Playlists.]()
-5. [Give Password Restriction on the Channel.]()
-6. [Restrict Domains where video can be embedded.]()
-7. [Build a web appplication using Channel API.]()
+1. [Create the Channels.]()
+1. [Upload Videos on the Channel.]()
+1. [Create Playlists.]()
+1. [Give Password Restriction on the Channel.]()
+1. [Restrict Domains where video can be embedded.]()
+1. [Build a web appplication using Channel API.]()
       1.[Generate Channel API credentials]()
-      2.[Build React UI]()
-      3.[Move build to node directory.]()
-      4.[Install Node modules.]()
-      5.[Deploy the Application.]()
+      1.[Build React UI]()
+      1.[Move build to node directory.]()
+      1.[Install Node modules.]()
+      1.[Deploy the Application.]()
 
 
 ## 1. Login using IBMID on IBM Watson Media.
