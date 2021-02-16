@@ -99,7 +99,6 @@ Media.
 
 ```
 Note: Uploading videos will take some time based on your internet bandwidth, please be patient for the upload to complete and watson media to process it.
-
 ```
 * Click **Start to Upload** Button. 
 * After the upload is complete, Go back to Dashboard, click on **Channel > Videos**, select all the uploaded videos and Hit Publish.
