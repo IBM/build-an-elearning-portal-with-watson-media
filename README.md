@@ -98,8 +98,7 @@ Media.
 
 
 ```
-Note: Uploading videos will take some time based on your internet bandwidth,
-please be patient for the upload to complete and watson media to process it.
+Note: Uploading videos will take some time based on your internet bandwidth, please be patient for the upload to complete and watson media to process it.
 
 ```
 * Click **Start to Upload** Button. 
@@ -264,7 +263,6 @@ Note: `/admin` page is to be accessed by the API owner who is giving the permiss
 
   ```
   Note: `/login` page can be accessed by anyone who wants to access channel content with the credentials provided or created on the portal as per admin's choice.
-
   ```
 
   Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in `React UI/src/content/sampleLogin.json`.
