@@ -1,12 +1,14 @@
 # Build an e-learning portal with Watson Media.
 
-The COVID pandemic has altered our conventional ways of working in companies, startups, businesses, and Educational Institutes were no different. In the current times, to maintain social distancing, Schools and Colleges are choosing the e-learning platforms to impart education. Though, it started as a  precautionary measure to stop the further spread of the pandemic. But it is turning into a much more effective and efficient mode of teaching in terms of resources. More and more startups are emerging in the educational domain to make use of this window of opportunity.  Therefore, IBM brings forth `IBM Watson Media` to the developer community, which provides almost everything they need to build an e-learning platform for their startup. 
+The COVID pandemic has altered our conventional ways of working in companies, startups, businesses, and Educational Institutes were no different. In the current times, to maintain social distancing, Schools and Colleges are choosing the e-learning platforms to impart education. Though, it started as a  precautionary measure to stop the further spread of the pandemic. But it is turning into a much more effective and efficient mode of teaching in terms of resources. More and more startups are emerging in the educational domain to make use of this window of opportunity.  Therefore, IBM brings forth **IBM Watson Media** to the developer community, which provides almost everything they need to build an e-learning platform for their startup. 
 
-[IBM Watson Media](https://www.ibm.com/watson/media) offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management. This Comprehensive video streaming platform provides Live stream and auto-archive for video-on-demand viewing to boost overall reach and engagement. Use IBM Watson Media solutions to stream events, executive town halls, video marketing product launches, and entertainment OTT (over-the-top) streaming. Built for scale and reliability, to optimize video quality, and powered by IBM Watson AI for video search and automated closed captioning, our video solutions are used by thousands of enterprises, service providers, educators, and media companies worldwide to improve video workflows, reliability and content monetization.
+IBM Watson Media is an enterprise solution created by IBM to manage content and get insightful analytics on the videos uploaded using the service. It is a convenient, and an easy to use service which can be used for all your video on demand needs. It is built for scalability making it a perfect solution for streaming live events and product launches. Powered by IBM's cloud storage makes it reliable and Watson AI integration offers additional features like automated closed captioning and optimized video quality. Learn more about watson media [here](https://www.ibm.com/watson/media).
 
-In this code pattern, we will demonstrate how to quickly build an `e-learning portal` using `Watson Media`.
+offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management. This Comprehensive video streaming platform provides Live stream and auto-archive for video-on-demand viewing to boost overall reach and engagement. Use IBM Watson Media solutions to stream events, executive town halls, video marketing product launches, and entertainment OTT (over-the-top) streaming. Built for scale and reliability, to optimize video quality, and powered by IBM Watson AI for video search and automated closed captioning, our video solutions are used by thousands of enterprises, service providers, educators, and media companies worldwide to improve video workflows, reliability and content monetization.
 
-The Scope of this Code Pattern is limited to following capabilities. `However, the Solutions can be scaled to accomodate a lot more functionalities andd capabilities through the Services, Products, Solutions and APIs provided by Watson Media.`  
+In this code pattern, we will demonstrate how to quickly build an **e-learning portal** using **Watson Media**.
+
+After completing the code pattern, you understand how to:
 
 - Create channels for different areas of learning. 
 - Create and upload videos for a channel.
@@ -14,16 +16,19 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 - Restrict domains where the video can be embedded.
 - Build a web application with authentication to access the channels using the APIs provided by Watson Media. 
 
+The Scope of this Code Pattern is limited to following capabilities. **However, the Solutions can be scaled to accommodate a lot more functionalities andd capabilities through the Services, Products, Solutions and APIs provided by Watson Media.**  
+
+
 ### Flow
 
 ![architecture](doc/src/images/architecture.png)
 
-1. Admin requests to authorizes app in `/admin`
-2. App redirects admin to IBM OAuth2.0 portal.
+1. Admin requests to authorizes the app
+2. App is authorized by the IBM OAuth2.0 portal.
 3. Node Server receives Auth token from Watson Media.
 4. App requests server for the auth token
 5. App uses auth token to create dashboard for user on runtime.
-6. User logs in and accesses content.
+6. User logs in and accesses content published on Watson Media.
 
 ### Included components
 
@@ -41,130 +46,147 @@ The Scope of this Code Pattern is limited to following capabilities. `However, t
 
 [![Watch the Application Demo Here](http://i3.ytimg.com/vi/dcW0lAgpQ_I/hqdefault.jpg)](https://youtu.be/dcW0lAgpQ_I)
 
+
 ### Steps
 1. [Login using IBMID on IBM Watson Media.](#1-login-using-ibmid-on-ibm-watson-media)
-1. [Create the Channels.](#2-create-the-channels)
-1. [Upload Videos on the Channel.](#3-upload-videos-on-the-channel)
-1. [Create Playlists.](#4-create-playlists)
-1. [Give Password Restriction on the Channel.](#5-give-password-restriction-on-the-channel)
-1. [Restrict Domains where video can be embedded.](#6-restrict-domains-where-video-can-be-embedded)
-1. [Build a web appplication using Channel API.](#7-build-a-web-appplication-using-channel-api)
-    * 7.1 [Generate Channel API credentials](#71-generate-channel-api-credentials)
-    * 7.2 [Build React UI](#72-build-react-ui)
-    * 7.3 [Move build to node directory.](#73-move-build-to-node-directory)
-    * 7.4 [Install Node modules.](#74-install-node-modules)
-    * 7.5 [Deploy the Application.](#75-deploy-the-application)
+2. [Create the Channels.](#2-create-the-channels)
+3. [Upload Videos on the Channel.](#3-upload-videos-on-the-channel)
+4. [Create Playlists.](#4-create-playlists)
+5. [Give Password Restriction on the Channel.](#5-give-password-restriction-on-the-channel)
+6. [Build a web application using Channel API.](#6-build-a-web-application-using-channel-api)
+    * 6.1 [Generate Channel API credentials](#61-generate-channel-api-credentials)
+    * 6.2 [Build React UI](#62-build-react-ui)
+    * 6.3 [Deploy the Application.](#63-deploy-the-application)
+7. [Authorize the Application.](#7-authorize-the-application)
+8. [Restrict Domains where video can be embedded.](#8-restrict-domains-where-video-can-be-embedded)
 
 
-## 1. Login using IBMID on IBM Watson Media.
+## 1. Login using IBM ID on IBM Watson Media.
 If you don't have IBM ID,  create an account on IBM Cloud Account 
 - Login to [IBM CLOUD](https://cloud.ibm.com/login).
 
 using the same ID, 
-* Click on Free Trial on [Watson Media Page](https://www.ibm.com/watson/media/services)
+* Click on Free Trial on [Watson Media Page](https://www.ibm.com/watson/media)
 * Login using IBM ID. Your 30 days free trial of the product will be activated. 
 
 <img src="doc/src/images/Dashboard.png" alt="Dashboard " title="dashboard" width="800" height="500" />
 
 ## 2. Create the Channels.
-* Click on `Create Channel`.
-  ```
-  Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
-  ```
-* Give the `Channel Name.` 
-* Select the `Language` from the dropdown 
-* Hit `Create` button. 
+Channels help us in organizing our content, we can group content by any metric as per our requirement like subjects or audience. This will make the videos more convenient to locate and also will be helpful when determining what videos can be accessed by a particular user.
+
+
+* In the **Title** field, enter your channel name, and under **Language of videos and broadcasts**,
+select your desired language, finally click on **Create** as shown.
+
+
+```
+Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
+```
 
 <img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
 
+```
+Note: You can view the Channel Page by clicking on the View Channel Page in the left panel.
+```
 
-* To View `Channel Page`, click on the `view Channel Page`
 
 ## 3. Upload Videos on the Channel.
-* Click on `Videos Button` on the left-hand side Dashboard. 
-* Click `upload` button.
-* Select all the files you want to upload from the computer and click `open`.
-* Click `Start to Upload` Button. 
-* After the upload is complete, Go back to Dashboard, under Videos section, Select all the uploaded videos and Hit Publish. 
-    
+* Click on **Videos Button** on the left-hand side Dashboard. 
+* Click **Upload** button.
+* Select all the files you want to upload from the computer,
+you can also give it a name and description and click on **Start Upload** button to upload the video on Watson
+Media.
+  ![uploadBox](doc/src/images/uploadBox.png)
+
+
+```
+Note: Uploading videos will take some time based on your internet bandwidth,
+please be patient for the upload to complete and watson media to process it.
+
+```
+* Click **Start to Upload** Button. 
+* After the upload is complete, Go back to Dashboard, click on **Channel > Videos**, select all the uploaded videos and Hit Publish.
+
 ![Watch this Gif](doc/src/images/upload.gif)
 
+
+* You will see a message popup saying the selected videos are published.
+
+
+```
+Note: Maximum storage of 500GB storage is available in lite plan to upload more content than that you will have to subscribe to a premium plan.
+```
+
 ## 4. Create Playlists.
-* Click on `Playlist Button` on the left-hand side Dashboard. 
-* Click `Create Playlist` button.
-* Give Playlist Name
-* Add Videos to the playlist and Hit `create button` 
+Playlists can be used to group together videos which are related and can be watched one after another. They are helpful for increasing user watch time and for making convenient go to content so viewer doesn't have to spend time in finding different videos pertaining to a similar topic.
+
+* Click on **Playlist Button** on the left-hand side Dashboard. 
+* Click **Create Playlist** button.
+* In the **Title** field, enter your playlist name, and click on **Create playlist** as shown.
+* You will see a message popup saying the selected videos are published.
+
 
 ![Watch this Gif](doc/src/images/playlist.gif)
 
 ## 5. Give Password Restriction on the Channel.
-* On the Dashboard, Click on `Security` Tab on the left-side panel.
-* Click on `Password Protection`
-* Checkmark the `Enable Password Protection` button.
-* Give the Channel Password of your choice and hit `save`. 
+Watson Media gives us the ability to secure our content with a password. This added layer of security makes sure that no undesired party has access to the content. Simply share the party with the viewers to give access.
+
+* On the Dashboard, Click on **Security** Tab on the left-side panel.
+* Click on **settings** next to **Password Protection**.
+* Check the **Enable Password Protection** button.
+* Give the Channel Password of your choice and hit **Save**. 
 
 <img src="doc/src/images/password.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
 
-## 6. Restrict Domains where video can be embedded.
-* On the Dashboard, Click on `Security` Tab on the left-side panel.
-* Click on `Embed Restriction`
-* Checkmark the `specify the domains where your streams can be embedded ` button.
-* Give the domains where you want to allow or restrict and hit `save`. 
 
-<img src="doc/src/images/restrictembed.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
+## 6. Build a web application using Channel API.
 
-## 7. Build a web appplication using Channel API.
-  ### 7.1 Generate Channel API credentials
-  * On Watson Media, Try it for free, sign up and get to the developers dashboard.
-  * From the left navigation bar click on **API/SDK Access**.
-  * Click **Create New Credentials** to create Channel API credentials.
-  * Enter a **Application Name** as per choice.
+In this step we will demonstrate the use of Channel API for building custom UI and dashboard for managing and sharing content. It shows the workflow and step by step usage for integrating the API which can later be used for defining your custom apps.
+
+  ### 6.1 Generate Channel API credentials
+  * From the left panel **Integration & apps > API/SDK Access**
+  * You will be asked to login, click on **login with your IBMid**
+  * Click **Create Credentials** to create Channel API credentials.
+  * Enter an **Application Name** as per choice.
   * Enter http://localhost:8080/get_token as the Redirect URL.
   * Select **Web Application** from the radio as the application type.
   * Click Save and copy the **Client ID**.
 
-  ### 7.2 Build React UI
-  Go to the directory on your local system where you cloned the repository and go inside the `React UI` folder and run the following command on your terminal.
+
+  ![createCreds](doc/src/images/createCreds.png)
+
+  * Once the credentials are created copy the `Client id` as it will be required in the next step.
+
+  ![clientId](doc/src/images/clientId.png)
+
+
+  ### 6.2 Build React UI
+  * In the repo parent folder, go to `Code/React UI` and run the following command on your terminal.
   ```bash
   npm run build
   ```
 
-  ### 7.3 Move build to node directory
-  After creating the react build run the following command in your terminal in the same directory as the build folder.
+  * After creating the react build run the following command in your terminal in the same directory as the build folder.
   ```bash
   mv ./build ./../
   ```
-  ### 7.4 Install Node Modules
-  Inside the folder `watson-media-node` run the following command
+  
+
+   ### 6.3 Deploy the Application
+  <details><summary><b>Deploy Locally</b></summary>
+
+
+
+  * Inside the `Code` directory run the following command
   ```bash
   npm install
   ```
-
-   ### 7.5 Deploy the Application
-  <details><summary><b>Deploy Locally</b></summary>
 
   * After node modules have been installed run the following command 
   ```bash
   node server.js
   ```
   After this the application is listening on http://localhost:8080/
-
-  * Open your Web Browser and visit http://localhost:8080 .You will be redirected to http://localhost:8080/admin . Here enter the Client ID that you previously copied. and click **Authorize.**
-  ![admin_auth](doc/src/images/admin_auth.png)
-
-  * This will redirect you to Watson Media OAuth and you will be required to login with your W3, UStream or Device Credentials. After logging in, click **Authorize.**
-  ![admin_oauth](doc/src/images/admin_oauth.png)
-  ![authorize](doc/src/images/authorize.png)
-
-  * Successful Authentication will redirect you to http://localhost:8080/login . 
-  Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in `React UI/src/content/sampleLogin.json`.
-  Look them up and enter it in the text boxes on `/login` and click Login.
-  ![login](doc/src/images/login.png)
-
-  * After successfully logging in you can now view the different channels and videos and playlists uploaded in them.
-  ![dash](doc/src/images/dash.png)
-  ![videos](doc/src/images/videos.png)
-
 
   </details>
   <details><summary><b>Deploy on Kubernetes</b></summary>
@@ -223,6 +245,49 @@ using the same ID,
   >NOTE: We have entered **32423** as this is the one that we have exposed in out `deploy.yaml` file.
 
   </details>
+
+## 7. Authorize the Application.
+
+
+  * Open your Web Browser and visit http://localhost:8080 if deployed locally or http://<YOUR_KUBERNETES_NODE_PUBLIC_URI> if you've chosen to deploy on Kubernetes. You will be redirected to `/admin` . Here enter the Client ID that you previously copied. and click **Authorize.**
+  ![admin_auth](doc/src/images/admin_auth.png)
+```
+Note: `/admin` page is to be accessed by the API owner who is giving the permission for the application to use the API and access the channel content. The application is accessible only if the person authorizes the application using the credentials permitted.
+```
+  * This will redirect you to Watson Media OAuth and you will be required to login with your W3, UStream or Device Credentials.
+  * Click on **Login with your IBMid** to continue the auth process.
+  
+  ![admin_oauth](doc/src/images/admin_oauth.png)
+
+  * After logging in, click **Authorize.**
+  ![authorize](doc/src/images/authorize.png)
+
+  * Successful Authentication will redirect you to http://localhost:8080/login .
+
+  ```
+  Note: `/login` page can be accessed by anyone who wants to access channel content with the credentials provided or created on the portal as per admin's choice.
+
+  ```
+
+  Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in `React UI/src/content/sampleLogin.json`.
+
+  
+  Look them up and enter it in the text boxes on `/login` and click Login.
+  ![login](doc/src/images/login.png)
+
+  * After successfully logging in you can now view the different channels and videos and playlists uploaded in them.
+  ![dash](doc/src/images/dash.png)
+  ![videos](doc/src/images/videos.png)
+
+
+## 8. Restrict Domains where video can be embedded.
+Restrict Domain helps us in making sure that no party is embedding our content without permission. This protects from misuse and unauthorized use of the content.
+* On the Dashboard, Click on **Security** Tab on the left-side panel.
+* Click on **Embed Restriction**
+* Check the **specify the domains where your streams can be embedded** button.
+* Give the domains where you want to allow or restrict and hit **save**. 
+
+<img src="doc/src/images/restrictembed.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
 
 
 ## License
