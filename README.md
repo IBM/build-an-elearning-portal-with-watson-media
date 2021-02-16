@@ -4,8 +4,6 @@ The COVID pandemic has altered our conventional ways of working in companies, st
 
 IBM Watson Media is an enterprise solution created by IBM to manage content and get insightful analytics on the videos uploaded using the service. It is a convenient, and an easy to use service which can be used for all your video on demand needs. It is built for scalability making it a perfect solution for streaming live events and product launches. Powered by IBM's cloud storage makes it reliable and Watson AI integration offers additional features like automated closed captioning and optimized video quality. Learn more about watson media [here](https://www.ibm.com/watson/media).
 
-offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management. This Comprehensive video streaming platform provides Live stream and auto-archive for video-on-demand viewing to boost overall reach and engagement. Use IBM Watson Media solutions to stream events, executive town halls, video marketing product launches, and entertainment OTT (over-the-top) streaming. Built for scale and reliability, to optimize video quality, and powered by IBM Watson AI for video search and automated closed captioning, our video solutions are used by thousands of enterprises, service providers, educators, and media companies worldwide to improve video workflows, reliability and content monetization.
-
 In this code pattern, we will demonstrate how to quickly build an **e-learning portal** using **Watson Media**.
 
 After completing the code pattern, you understand how to:
