@@ -236,7 +236,7 @@ In this step you will learn to the use of Channel API for building custom UI and
   >Note: `/login` page can be accessed by anyone who wants to access channel content with the credentials provided or created on the portal as per admin's choice.
   
 
-  * Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in [`Code/React UI/src/content/sampleLogin.json`](https://github.com/IBM/Build-an-elearning-portal-with-Watson-Media/tree/main/Code/React%20UI/src/content/sampleLogin.json)
+  * Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in [`Code/React UI/src/content/sampleLogin.json`](https://github.com/kushagra27/Build-an-elearning-portal-with-Watson-Media/blob/main/Code/React%20UI/src/content/sampleLogin.json)
 
   
   * Look them up and enter it in the text boxes on `/login` and click Login.
@@ -249,7 +249,19 @@ In this step you will learn to the use of Channel API for building custom UI and
   ![videos](doc/src/images/videos.png)
 
 ## (Optional) Build / Modify UI
-todo
+You can edit UI for the application as per your use and compile the code to serve using the Node server.
+* Go to the `Code/React UI` directory and run the following command on your terminal.
+  ```bash
+  npm run build
+  ```
+
+* Now run the following command in your terminal in the same directory as the build folder to move the it to the Code directory.
+  ```bash
+  mv ./build ./../
+  ```
+
+* You can now deploy your updated applications by following steps [7](#7-deploy-the-application) and [8](#8-run-the-application)
+  
 
 ## (Optional) Restrict Domains where video can be embedded
 Restrict Domain helps us in making sure that no party is embedding our content without permission. This protects from misuse and unauthorized use of the content.
@@ -259,9 +271,9 @@ Restrict Domain helps us in making sure that no party is embedding our content w
 * Give the domains where you want to allow or restrict and hit **save**. 
 ![embedding](doc/src/images/restrictembed.png)
 
+
 # Summary
-todo
-At the end of the code pattern you will have learnt how to ...
+At the end of this code pattern you will have learnt how to Create channels, upload videos, curate playlists, secure content by enabling password and restricting embed URLs and build a web application with authentication to access the channels using the APIs provided by Watson Media. 
 
 ## License
 
