@@ -74,17 +74,11 @@ Channels help us in organizing our content, we can group content by any metric a
 
 * In the **Title** field, enter your channel name, and under **Language of videos and broadcasts**,
 select your desired language, finally click on **Create** as shown.
-
-
+![create channel](doc/src/images/createChannel.png)
 
 >Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
 
-
-<img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
-
-
 >Note: You can view the Channel Page by clicking on the View Channel Page in the left panel.
-
 
 
 ## 3. Upload Videos on the Channel.
@@ -93,7 +87,7 @@ select your desired language, finally click on **Create** as shown.
 * Select all the files you want to upload from the computer,
 you can also give it a name and description and click on **Start Upload** button to upload the video on Watson
 Media.
-  ![uploadBox](doc/src/images/uploadBox.png)
+![uploadBox](doc/src/images/uploadBox.png)
 
 
 
@@ -101,7 +95,6 @@ Media.
 
 * Click **Start to Upload** Button. 
 * After the upload is complete, Go back to Dashboard, click on **Channel > Videos**, select all the uploaded videos and Hit Publish.
-
 ![Upload](doc/src/images/upload.png)
 
 
@@ -117,15 +110,12 @@ Playlists can be used to group videos together which are related and can be watc
 * Click **Create Playlist** button.
 
 * In the **Title** field, enter your playlist name, and click on **Create playlist** as shown.
-
 ![Playlist](doc/src/images/playlist1.png)
 
 * You will see a modal to add videos to playlist, click on **add to playlist** to add that video to the playlist and press done as shown to create it.
-
 ![Playlist2](doc/src/images/playlist2.png)
 
 * You will see a message popup saying **Playlist Created**.
-
 
 
 ## 5. Give Password Restriction on the Channel.
@@ -135,8 +125,7 @@ Watson Media gives us the ability to secure our content with a password. This ad
 * Click on **Settings** next to **Password Protection**.
 * Check the **Enable Password Protection** button.
 * Give the Channel Password of your choice and hit **Save**. 
-
-<img src="doc/src/images/password.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
+![password](doc/src/images/password.png) 
 
 
 ## 6. Generate Channel API credentials
@@ -150,12 +139,9 @@ In this step you will learn to the use of Channel API for building custom UI and
   * Enter http://localhost:8080/get_token as the Redirect URL.
   * Select **Web Application** from the radio as the application type.
   * Click on Save.
-
-
   ![createCreds](doc/src/images/createCreds.png)
 
   * Once the credentials are created copy the `Client id` as it will be required in the next step.
-
   ![clientId](doc/src/images/clientId.png)
 
 
@@ -223,7 +209,6 @@ In this step you will learn to the use of Channel API for building custom UI and
   The Application is now running on your kubernetes node.
 
   * Go to your Watson Media API/SDK Access Dashboard and change the Redirect URL to http://<YOUR_KUBERNETES_NODE_PUBLIC_IP>:32423/get_token
-
   ![channelAPI](doc/src/images/channelAPI.png)
 
 
@@ -244,11 +229,9 @@ In this step you will learn to the use of Channel API for building custom UI and
 
   * This will redirect you to Watson Media OAuth and you will be required to login with your W3, UStream or Device Credentials.
   * Click on **Login with your IBMid** to continue the auth process.
-  
   ![admin_oauth](doc/src/images/admin_oauth.png)
 
   * After logging in, click **Authorize.**
-
   ![authorize](doc/src/images/authorize.png)
 
   > Successful Authentication will redirect you to `/login` 
@@ -264,12 +247,9 @@ In this step you will learn to the use of Channel API for building custom UI and
   ![login](doc/src/images/login.png)
 
   * After successfully logging in you can now view the different channels that you have created in Watson Media.
-  
   ![dash](doc/src/images/dash.png)
   
-
   * Select the channel and you can view the videos and playlists uploaded in that channel.
-  
   ![videos](doc/src/images/videos.png)
 
 
@@ -279,8 +259,7 @@ Restrict Domain helps us in making sure that no party is embedding our content w
 * Click on **Embed Restriction**
 * Check the **specify the domains where your streams can be embedded** button.
 * Give the domains where you want to allow or restrict and hit **save**. 
-
-<img src="doc/src/images/restrictembed.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
+![embedding](doc/src/images/restrictembed.png)
 
 
 ## License
