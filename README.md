@@ -63,8 +63,8 @@ If you don't have IBM ID,  create an account on IBM Cloud Account
 
 using the same ID, 
 * Click on Start Streaming Video Trial on [Watson Media Page](https://www.ibm.com/watson/media)
-* Login using IBM ID. Your 30 days free trial of the product will be activated. 
-<img src="doc/src/images/Dashboard.png" alt="Dashboard " title="dashboard" width="800" height="500" />
+* Login using IBM ID. Your 30 days free trial of the product will be activated.
+![dashboard](doc/src/images/Dashboard.png)
 
 ## 2. Create the Channels.
 Channels help us in organizing our content, we can group content by any metric as per our requirement like subjects or audience. This will make the videos more convenient to locate and also will be helpful when determining what videos can be accessed by a particular user.
