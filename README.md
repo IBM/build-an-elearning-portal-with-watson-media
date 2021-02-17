@@ -51,12 +51,10 @@ The Scope of this Code Pattern is limited to following capabilities. **However, 
 3. [Upload Videos on the Channel.](#3-upload-videos-on-the-channel)
 4. [Create Playlists.](#4-create-playlists)
 5. [Give Password Restriction on the Channel.](#5-give-password-restriction-on-the-channel)
-6. [Build a web application using Channel API.](#6-build-a-web-application-using-channel-api)
-    * 6.1 [Generate Channel API credentials](#61-generate-channel-api-credentials)
-    * 6.2 [Build React UI](#62-build-react-ui)
-    * 6.3 [Deploy the Application.](#63-deploy-the-application)
-7. [Authorize the Application.](#7-authorize-the-application)
-8. [Restrict Domains where video can be embedded.](#8-restrict-domains-where-video-can-be-embedded)
+6. [Generate Channel API credentials](#6-generate-channel-api-credentials)
+7. [Deploy the Application.](#7-deploy-the-application)
+8. [Authorize the Application.](#8-authorize-the-application)
+9. [Restrict Domains where video can be embedded.](#9-restrict-domains-where-video-can-be-embedded)
 
 
 ## 1. Login using IBM ID on IBM Watson Media.
@@ -142,11 +140,10 @@ Watson Media gives us the ability to secure our content with a password. This ad
 <img src="doc/src/images/password.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
 
 
-## 6. Build a web application using Channel API.
+## 6. Generate Channel API credentials
 
 In this step you will learn to the use of Channel API for building custom UI and dashboard for managing and sharing content. It shows the workflow and step by step usage for integrating the API which can later be used for defining your custom apps.
 
-  ### 6.1 Generate Channel API credentials
   * From the left panel click on **Integration & apps > API/SDK Access**
   * You will be asked to login, click on **login with your IBMid**
   * Click **Create Credentials** to create Channel API credentials.
@@ -163,7 +160,7 @@ In this step you will learn to the use of Channel API for building custom UI and
   ![clientId](doc/src/images/clientId.png)
 
 
-  ### 6.2 Deploy the Application
+  ## 7. Deploy the Application
   <details><summary><b>Deploy Locally</b></summary>
 
   * Inside the `Code` directory run the following command
@@ -194,7 +191,7 @@ In this step you will learn to the use of Channel API for building custom UI and
 
 
   #### Build and push Docker Image to Docker Hub.
-  * Inside the directory `watson-media-node` run the following command
+  * Inside the directory `Code` run the following command
   ```bash
   docker build -t <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG> .
   ```
@@ -209,7 +206,7 @@ In this step you will learn to the use of Channel API for building custom UI and
   docker push <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG> 
   ```
 
-  * Inside the directory `watson-media-node`, change `deploy.yaml` file replace line no. 17 to
+  * Inside the directory `Code`, change `deploy.yaml` file replace line no. 17 to
   ```bash
   image : <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG>
   ```
@@ -236,10 +233,12 @@ In this step you will learn to the use of Channel API for building custom UI and
 
   </details>
 
-## 7. Run the Application.
+  ## 8. Run the Application.
 
 
-  * Open your web browser and visit the app URL. You will be redirected to `/admin` . Here enter the Client ID that you previously copied. and click **Authorize.**
+  * Open your web browser and visit the app URL obtained in step 7. 
+  
+  * You will be redirected to `/admin` . Here enter the Client ID that you previously copied in step 6, and click **Authorize Access to Videos** as shown in the screenshot.
   ![admin_auth](doc/src/images/admin_auth.png)
 
 >Note: `/admin` page is to be accessed by the API owner who is giving the permission for the application to use the API and access the channel content. The application is accessible only if the person authorizes the application using the credentials permitted.
@@ -250,26 +249,32 @@ In this step you will learn to the use of Channel API for building custom UI and
   ![admin_oauth](doc/src/images/admin_oauth.png)
 
   * After logging in, click **Authorize.**
+
   ![authorize](doc/src/images/authorize.png)
 
-  * Successful Authentication will redirect you to http://localhost:8080/login .
-
-  ```
-  Note: `/login` page can be accessed by anyone who wants to access channel content with the credentials provided or created on the portal as per admin's choice.
-  ```
-
-  Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in `React UI/src/content/sampleLogin.json`.
+  > Successful Authentication will redirect you to `/login` 
 
   
-  Look them up and enter it in the text boxes on `/login` and click Login.
+  >Note: `/login` page can be accessed by anyone who wants to access channel content with the credentials provided or created on the portal as per admin's choice.
+  
+
+  * Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in [`Code/React UI/src/content/sampleLogin.json`](https://github.com/IBM/Build-an-elearning-portal-with-Watson-Media/tree/main/Code/React%20UI/src/content/sampleLogin.json)
+
+  
+  * Look them up and enter it in the text boxes on `/login` and click Login.
   ![login](doc/src/images/login.png)
 
-  * After successfully logging in you can now view the different channels and videos and playlists uploaded in them.
+  * After successfully logging in you can now view the different channels that you have created in Watson Media.
+  
   ![dash](doc/src/images/dash.png)
+  
+
+  * Select the channel and you can view the videos and playlists uploaded in that channel.
+  
   ![videos](doc/src/images/videos.png)
 
 
-## 8. Restrict Domains where video can be embedded.
+## 9. Restrict Domains where video can be embedded. (Optional)
 Restrict Domain helps us in making sure that no party is embedding our content without permission. This protects from misuse and unauthorized use of the content.
 * On the Dashboard, Click on **Security** Tab on the left-side panel.
 * Click on **Embed Restriction**
