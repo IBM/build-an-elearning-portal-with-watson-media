@@ -15,11 +15,9 @@ After completing the code pattern, you understand how to:
 - Build a web application with authentication to access the channels using the APIs provided by Watson Media. 
 
 The Scope of this Code Pattern is limited to following capabilities. **However, the Solutions can be scaled to accommodate a lot more functionalities andd capabilities through the Services, Products, Solutions and APIs provided by Watson Media.**  
-
+![architecture](doc/src/images/architecture.png)
 
 ## Flow
-
-![architecture](doc/src/images/architecture.png)
 
 1. Admin requests to authorizes the app
 2. App is authorized by the IBM OAuth2.0 portal.
