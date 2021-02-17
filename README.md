@@ -53,9 +53,7 @@ The Scope of this Code Pattern is limited to following capabilities. **However, 
 5. [Give Password Restriction on the Channel.](#5-give-password-restriction-on-the-channel)
 6. [Generate Channel API credentials](#6-generate-channel-api-credentials)
 7. [Deploy the Application.](#7-deploy-the-application)
-8. [Authorize the Application.](#8-authorize-the-application)
-9. [Restrict Domains where video can be embedded.](#9-restrict-domains-where-video-can-be-embedded)
-
+8. [Run the Application.](#8-run-the-application)
 
 ## 1. Login using IBM ID on IBM Watson Media.
 If you don't have IBM ID,  create an account on IBM Cloud Account 
@@ -252,8 +250,10 @@ In this step you will learn to the use of Channel API for building custom UI and
   * Select the channel and you can view the videos and playlists uploaded in that channel.
   ![videos](doc/src/images/videos.png)
 
+## (Optional) Build / Modify UI
+todo
 
-## 9. Restrict Domains where video can be embedded. (Optional)
+## (Optional) Restrict Domains where video can be embedded
 Restrict Domain helps us in making sure that no party is embedding our content without permission. This protects from misuse and unauthorized use of the content.
 * On the Dashboard, Click on **Security** Tab on the left-side panel.
 * Click on **Embed Restriction**
@@ -261,6 +261,9 @@ Restrict Domain helps us in making sure that no party is embedding our content w
 * Give the domains where you want to allow or restrict and hit **save**. 
 ![embedding](doc/src/images/restrictembed.png)
 
+## Summary
+todo
+At the end of the code pattern you will have learnt how to ...
 
 ## License
 
