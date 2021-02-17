@@ -17,7 +17,7 @@ After completing the code pattern, you understand how to:
 The Scope of this Code Pattern is limited to following capabilities. **However, the Solutions can be scaled to accommodate a lot more functionalities andd capabilities through the Services, Products, Solutions and APIs provided by Watson Media.**  
 
 
-### Flow
+## Flow
 
 ![architecture](doc/src/images/architecture.png)
 
@@ -28,24 +28,24 @@ The Scope of this Code Pattern is limited to following capabilities. **However, 
 5. App uses auth token to create dashboard for user on runtime.
 6. User logs in and accesses content published on Watson Media.
 
-### Included components
+## Included components
 
 * [IBM Watson Media](https://www.ibm.com/watson/media): It offers AI-driven solutions for live streaming events, corporate communication, video analytics, and content management.
 * [Kubernetes](https://cloud.ibm.com/kubernetes/catalog/create): IBM Cloud Kubernetes Service creates a cluster of compute hosts and deploys highly available containers. A Kubernetes cluster lets you securely manage the resources that you need to quickly deploy, update, and scale applications.
 
-### Featured technologies
+## Featured technologies
 
 * [Node.js](https://nodejs.org/en/): An asynchronous event driven JavaScript runtime, designed to build scalable applications
 * [React](https://reactjs.org/): Javascript library for building User Interfaces
 * [Docker](https://www.docker.com/why-docker): Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers.
 
 
-### Watch the Video
+# Watch the Video
 
 [![Watch the Application Demo Here](http://i3.ytimg.com/vi/dcW0lAgpQ_I/hqdefault.jpg)](https://youtu.be/dcW0lAgpQ_I)
 
 
-### Steps
+# Steps
 1. [Login using IBMID on IBM Watson Media.](#1-login-using-ibmid-on-ibm-watson-media)
 2. [Create the Channels.](#2-create-the-channels)
 3. [Upload Videos on the Channel.](#3-upload-videos-on-the-channel)
@@ -261,7 +261,7 @@ Restrict Domain helps us in making sure that no party is embedding our content w
 * Give the domains where you want to allow or restrict and hit **save**. 
 ![embedding](doc/src/images/restrictembed.png)
 
-## Summary
+# Summary
 todo
 At the end of the code pattern you will have learnt how to ...
 
