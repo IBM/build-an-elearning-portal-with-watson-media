@@ -1,6 +1,6 @@
 # Build an e-learning portal with Watson Media.
 
-The COVID pandemic has altered our conventional ways of working in companies, startups, businesses, and Educational Institutes were no different. In the current times, to maintain social distancing, Schools and Colleges are choosing the e-learning platforms to impart education. Though, it started as a  precautionary measure to stop the further spread of the pandemic. But it is turning into a much more effective and efficient mode of teaching in terms of resources. More and more startups are emerging in the educational domain to make use of this window of opportunity.  Therefore, IBM brings forth **IBM Watson Media** to the developer community, which provides almost everything they need to build an e-learning platform for their startup. 
+The COVID pandemic has altered our conventional ways of working in companies, startups, businesses, and Educational Institutes. In the current times, to maintain social distancing, Schools and Colleges are choosing the e-learning platforms to impart education. Though, it started as a  precautionary measure to stop the further spread of the pandemic. But it is turning into a much more effective and efficient mode of teaching in terms of resources. More and more startups are emerging in the educational domain to make use of this window of opportunity.  Therefore, IBM brings forth **IBM Watson Media** to the developer community, which provides almost everything they need to build an e-learning platform for their startup. 
 
 IBM Watson Media is an enterprise solution created by IBM to manage content and get insightful analytics on the videos uploaded using the service. It is a convenient, and an easy to use service which can be used for all your video on demand needs. It is built for scalability making it a perfect solution for streaming live events and product launches. Powered by IBM's cloud storage makes it reliable and Watson AI integration offers additional features like automated closed captioning and optimized video quality. Learn more about watson media [here](https://www.ibm.com/watson/media).
 
@@ -64,7 +64,7 @@ If you don't have IBM ID,  create an account on IBM Cloud Account
 - Login to [IBM CLOUD](https://cloud.ibm.com/login).
 
 using the same ID, 
-* Click on Free Trial on [Watson Media Page](https://www.ibm.com/watson/media)
+* Click on Start Streaming Video Trial on [Watson Media Page](https://www.ibm.com/watson/media)
 * Login using IBM ID. Your 30 days free trial of the product will be activated. 
 
 <img src="doc/src/images/Dashboard.png" alt="Dashboard " title="dashboard" width="800" height="500" />
@@ -73,23 +73,25 @@ using the same ID,
 Channels help us in organizing our content, we can group content by any metric as per our requirement like subjects or audience. This will make the videos more convenient to locate and also will be helpful when determining what videos can be accessed by a particular user.
 
 
+* In the left panel, under **Channel** click on **Create Channel**.
+
 * In the **Title** field, enter your channel name, and under **Language of videos and broadcasts**,
 select your desired language, finally click on **Create** as shown.
 
 
-```
-Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
-```
+
+>Note: Free Trial allows you to create only one channel, you need to upgrade to premium account to create more.
+
 
 <img src="doc/src/images/createChannel.png" alt="Create Channel" title="Create Channel" width="800" height="500" />
 
-```
-Note: You can view the Channel Page by clicking on the View Channel Page in the left panel.
-```
+
+>Note: You can view the Channel Page by clicking on the View Channel Page in the left panel.
+
 
 
 ## 3. Upload Videos on the Channel.
-* Click on **Videos Button** on the left-hand side Dashboard. 
+* Click on **Videos** on the left panel. 
 * Click **Upload** button.
 * Select all the files you want to upload from the computer,
 you can also give it a name and description and click on **Start Upload** button to upload the video on Watson
@@ -97,39 +99,43 @@ Media.
   ![uploadBox](doc/src/images/uploadBox.png)
 
 
-```
-Note: Uploading videos will take some time based on your internet bandwidth, please be patient for the upload to complete and watson media to process it.
 
-```
+>Note: Uploading videos will take some time based on your internet bandwidth, please be patient for the upload to complete and watson media to process it.
+
 * Click **Start to Upload** Button. 
 * After the upload is complete, Go back to Dashboard, click on **Channel > Videos**, select all the uploaded videos and Hit Publish.
 
-![Watch this Gif](doc/src/images/upload.gif)
+![Upload](doc/src/images/upload.png)
 
 
 * You will see a message popup saying the selected videos are published.
 
+>Note: Maximum storage of 500GB storage is available in lite plan to upload more content than that you will have to subscribe to a premium plan.
 
-```
-Note: Maximum storage of 500GB storage is available in lite plan to upload more content than that you will have to subscribe to a premium plan.
-```
 
 ## 4. Create Playlists.
-Playlists can be used to group together videos which are related and can be watched one after another. They are helpful for increasing user watch time and for making convenient go to content so viewer doesn't have to spend time in finding different videos pertaining to a similar topic.
+Playlists can be used to group videos together which are related and can be watched one after another. They are helpful for increasing user watch time and for making convenient go to content so viewer doesn't have to spend time in finding different videos pertaining to a similar topic.
 
-* Click on **Playlist Button** on the left-hand side Dashboard. 
+* Click on **Playlist** on the left panel. 
 * Click **Create Playlist** button.
+
 * In the **Title** field, enter your playlist name, and click on **Create playlist** as shown.
-* You will see a message popup saying the selected videos are published.
+
+![Playlist](doc/src/images/playlist1.png)
+
+* You will see a modal to add videos to playlist, click on **add to playlist** to add that video to the playlist and press done as shown to create it.
+
+![Playlist2](doc/src/images/playlist2.png)
+
+* You will see a message popup saying **Playlist Created**.
 
 
-![Watch this Gif](doc/src/images/playlist.gif)
 
 ## 5. Give Password Restriction on the Channel.
-Watson Media gives us the ability to secure our content with a password. This added layer of security makes sure that no undesired party has access to the content. Simply share the party with the viewers to give access.
+Watson Media gives us the ability to secure our content with a password. This added layer of security makes sure that no undesired party has access to the content. 
 
-* On the Dashboard, Click on **Security** Tab on the left-side panel.
-* Click on **settings** next to **Password Protection**.
+* On the Dashboard, Click on **Security** Tab on the left panel.
+* Click on **Settings** next to **Password Protection**.
 * Check the **Enable Password Protection** button.
 * Give the Channel Password of your choice and hit **Save**. 
 
@@ -138,16 +144,16 @@ Watson Media gives us the ability to secure our content with a password. This ad
 
 ## 6. Build a web application using Channel API.
 
-In this step we will demonstrate the use of Channel API for building custom UI and dashboard for managing and sharing content. It shows the workflow and step by step usage for integrating the API which can later be used for defining your custom apps.
+In this step you will learn to the use of Channel API for building custom UI and dashboard for managing and sharing content. It shows the workflow and step by step usage for integrating the API which can later be used for defining your custom apps.
 
   ### 6.1 Generate Channel API credentials
-  * From the left panel **Integration & apps > API/SDK Access**
+  * From the left panel click on **Integration & apps > API/SDK Access**
   * You will be asked to login, click on **login with your IBMid**
   * Click **Create Credentials** to create Channel API credentials.
   * Enter an **Application Name** as per choice.
   * Enter http://localhost:8080/get_token as the Redirect URL.
   * Select **Web Application** from the radio as the application type.
-  * Click Save and copy the **Client ID**.
+  * Click on Save.
 
 
   ![createCreds](doc/src/images/createCreds.png)
@@ -157,22 +163,8 @@ In this step we will demonstrate the use of Channel API for building custom UI a
   ![clientId](doc/src/images/clientId.png)
 
 
-  ### 6.2 Build React UI
-  * In the repo parent folder, go to `Code/React UI` and run the following command on your terminal.
-  ```bash
-  npm run build
-  ```
-
-  * After creating the react build run the following command in your terminal in the same directory as the build folder.
-  ```bash
-  mv ./build ./../
-  ```
-  
-
-   ### 6.3 Deploy the Application
+  ### 6.2 Deploy the Application
   <details><summary><b>Deploy Locally</b></summary>
-
-
 
   * Inside the `Code` directory run the following command
   ```bash
@@ -239,18 +231,19 @@ In this step we will demonstrate the use of Channel API for building custom UI a
   ![channelAPI](doc/src/images/channelAPI.png)
 
 
-  >NOTE: We have entered **32423** as this is the one that we have exposed in out `deploy.yaml` file.
+  After this the application is listening on http://<YOUR_KUBERNETES_NODE_PUBLIC_IP>:32423
+  >NOTE: We have entered **32423** as this is the one that we have exposed in our `deploy.yaml` file.
 
   </details>
 
-## 7. Authorize the Application.
+## 7. Run the Application.
 
 
-  * Open your Web Browser and visit http://localhost:8080 if deployed locally or http://<YOUR_KUBERNETES_NODE_PUBLIC_URI> if you've chosen to deploy on Kubernetes. You will be redirected to `/admin` . Here enter the Client ID that you previously copied. and click **Authorize.**
+  * Open your web browser and visit the app URL. You will be redirected to `/admin` . Here enter the Client ID that you previously copied. and click **Authorize.**
   ![admin_auth](doc/src/images/admin_auth.png)
-```
-Note: `/admin` page is to be accessed by the API owner who is giving the permission for the application to use the API and access the channel content. The application is accessible only if the person authorizes the application using the credentials permitted.
-```
+
+>Note: `/admin` page is to be accessed by the API owner who is giving the permission for the application to use the API and access the channel content. The application is accessible only if the person authorizes the application using the credentials permitted.
+
   * This will redirect you to Watson Media OAuth and you will be required to login with your W3, UStream or Device Credentials.
   * Click on **Login with your IBMid** to continue the auth process.
   
