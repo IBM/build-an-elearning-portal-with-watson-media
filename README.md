@@ -244,18 +244,32 @@ In this step you will learn to the use of Channel API for building custom UI and
 
   * After successfully logging in you can now view the different channels that you have created in Watson Media.
   ![dash](doc/src/images/dash.png)
-  
+  >Note: If you see a spinner loading for a long amount of time it is probably because of CORS error. If you are using Chrome you can fix that using **Allow CORS** extension which can be added from this [link](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?utm_source=chrome-ntp-icon). Simply install and toggle it on by pressing the icon as shown in the image below.
+  ![Extension](doc/src/images/extension.png)
+
+
   * Select the channel and you can view the videos and playlists uploaded in that channel.
   ![videos](doc/src/images/videos.png)
 
 ## (Optional) Build / Modify UI
 You can edit UI for the application as per your use and compile the code to serve using the Node server.
+
 * Go to the `code/reactui` directory and run the following command on your terminal.
+  ```bash
+  npm install
+  ```
+
+* Build the application using the following command
   ```bash
   npm run build
   ```
 
-* Now run the following command in your terminal in the same directory as the build folder to move the it to the code directory.
+* Now run the following command in your terminal in the same directory as the build folder to remove the old build.
+  ```bash
+  rm -rf ./../build
+  ```
+
+* Next move the new build to the code directory.
   ```bash
   mv ./build ./../
   ```
