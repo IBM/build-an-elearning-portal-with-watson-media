@@ -4,7 +4,7 @@ import {
   } from "react-router-dom"
 import { Container, Row, Col } from 'react-bootstrap';
 // import Dashboard from "../Dashboard"
-import access_token from '../access_token'
+// import access_token from '../access_token'
 import { Button, Form, TextInput } from 'carbon-components-react';
 import back from './../../assets/background3.jpg'
 const axios = require('axios')
