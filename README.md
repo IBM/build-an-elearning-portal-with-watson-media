@@ -1,8 +1,8 @@
 # Build an e-learning portal with Watson Media.
 
-The COVID pandemic has altered our conventional ways of working in companies, startups, businesses, and Educational Institutes. In the current times, to maintain social distancing, Schools and Colleges are choosing the e-learning platforms to impart education. Though, it started as a  precautionary measure to stop the further spread of the pandemic. But it is turning into a much more effective and efficient mode of teaching in terms of resources. More and more startups are emerging in the educational domain to make use of this window of opportunity.  Therefore, IBM brings forth **IBM Watson Media** to the developer community, which provides almost everything they need to build an e-learning platform for their startup. 
+The COVID pandemic has altered our conventional ways of working in companies, startups, businesses, and Educational Institutes. In the current times, to maintain social distancing, Schools and Colleges are choosing the e-learning platforms to impart education. Though, it started as a  precautionary measure to stop the further spread of the pandemic. But it is turning into a much more effective and efficient mode of teaching in terms of resources. More and more startups are emerging in the educational domain to make use of this window of opportunity. IBM Watson Media provides the required capabilities to build an e-learning platform for their startup. 
 
-IBM Watson Media is an enterprise solution created by IBM to manage content and get insightful analytics on the videos uploaded using the service. It is a convenient, and an easy to use service which can be used for all your video on demand needs. It is built for scalability making it a perfect solution for streaming live events and product launches. Powered by IBM's cloud storage makes it reliable and Watson AI integration offers additional features like automated closed captioning and optimized video quality. Learn more about watson media [here](https://www.ibm.com/watson/media).
+IBM Watson Media is an enterprise solution created by IBM to manage content and get insightful analytics on the videos uploaded using the service. It is a convenient, and an easy to use service which can be used for all your video on demand needs. It is built for scalability making it a perfect solution for streaming live events and product launches. Powered by IBM's cloud storage makes it reliable and Watson AI integration offers additional features like automated closed captioning and optimized video quality. Learn more about Watson Media [here](https://www.ibm.com/watson/media).
 
 In this code pattern, we will demonstrate how to quickly build an **e-learning portal** using **Watson Media**.
 
@@ -14,7 +14,7 @@ After completing the code pattern, you understand how to:
 - Restrict domains where the video can be embedded.
 - Build a web application with authentication to access the channels using the APIs provided by Watson Media. 
 
-The Scope of this Code Pattern is limited to following capabilities. **However, the Solutions can be scaled to accommodate a lot more functionalities andd capabilities through the Services, Products, Solutions and APIs provided by Watson Media.**  
+The Scope of this Code Pattern is limited to following capabilities. **However, the Solutions can be scaled to accommodate a lot more functionalities and capabilities through the services, products, solutions and APIs provided by Watson Media.**  
 ![architecture](doc/src/images/architecture.png)
 
 ## Flow
@@ -44,7 +44,7 @@ The Scope of this Code Pattern is limited to following capabilities. **However, 
 
 
 # Steps
-1. [Login using IBMID on IBM Watson Media.](#1-login-using-ibmid-on-ibm-watson-media)
+1. [Login using IBMid on IBM Watson Media.](#1-login-using-ibmid-on-ibm-watson-media)
 2. [Create the Channels.](#2-create-the-channels)
 3. [Upload Videos on the Channel.](#3-upload-videos-on-the-channel)
 4. [Create Playlists.](#4-create-playlists)
@@ -55,7 +55,7 @@ The Scope of this Code Pattern is limited to following capabilities. **However, 
 
 ## 1. Login using IBM ID on IBM Watson Media.
 If you don't have IBM ID,  create an account on IBM Cloud Account 
-- Login to [IBM CLOUD](https://cloud.ibm.com/login).
+- Login to [IBM Cloud](https://cloud.ibm.com/login).
 
 using the same ID, 
 * Click on Start Streaming Video Trial on [Watson Media Page](https://www.ibm.com/watson/media)
@@ -144,7 +144,7 @@ In this step you will learn to the use of Channel API for building custom UI and
   ## 7. Deploy the Application
   <details><summary><b>Deploy Locally</b></summary>
 
-  * Inside the `Code` directory run the following command
+  * Inside the `code` directory run the following command
   ```bash
   npm install
   ```
@@ -172,7 +172,7 @@ In this step you will learn to the use of Channel API for building custom UI and
 
 
   #### Build and push Docker Image to Docker Hub.
-  * Inside the directory `Code` run the following command
+  * Inside the directory `code` run the following command
   ```bash
   docker build -t <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG> .
   ```
@@ -187,7 +187,7 @@ In this step you will learn to the use of Channel API for building custom UI and
   docker push <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG> 
   ```
 
-  * Inside the directory `Code`, change `deploy.yaml` file replace line no. 17 to
+  * Inside the directory `code`, change `deploy.yaml` file replace line no. 17 to
   ```bash
   image : <DOCKERHUB_USERNAME>/<IMAGE_NAME>:<TAG>
   ```
@@ -236,7 +236,7 @@ In this step you will learn to the use of Channel API for building custom UI and
   >Note: `/login` page can be accessed by anyone who wants to access channel content with the credentials provided or created on the portal as per admin's choice.
   
 
-  * Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in [`Code/React UI/src/content/sampleLogin.json`](https://github.com/kushagra27/Build-an-elearning-portal-with-Watson-Media/blob/main/Code/React%20UI/src/content/sampleLogin.json)
+  * Here the user is required to enter the login credentials managed by the developer. For demonstration we are using the credentials stored in [`code/reactui/src/content/sampleLogin.json`](https://github.com/kushagra27/Build-an-elearning-portal-with-Watson-Media/blob/main/code/reactui/src/content/sampleLogin.json)
 
   
   * Look them up and enter it in the text boxes on `/login` and click Login.
@@ -250,12 +250,12 @@ In this step you will learn to the use of Channel API for building custom UI and
 
 ## (Optional) Build / Modify UI
 You can edit UI for the application as per your use and compile the code to serve using the Node server.
-* Go to the `Code/React UI` directory and run the following command on your terminal.
+* Go to the `code/reactui` directory and run the following command on your terminal.
   ```bash
   npm run build
   ```
 
-* Now run the following command in your terminal in the same directory as the build folder to move the it to the Code directory.
+* Now run the following command in your terminal in the same directory as the build folder to move the it to the code directory.
   ```bash
   mv ./build ./../
   ```
@@ -273,7 +273,7 @@ Restrict Domain helps us in making sure that no party is embedding our content w
 
 
 # Summary
-At the end of this code pattern you will have learnt how to Create channels, upload videos, curate playlists, secure content by enabling password and restricting embed URLs and build a web application with authentication to access the channels using the APIs provided by Watson Media. 
+In this code pattern you have learnt how to create channels, upload videos, curate playlists, secure content by enabling password and restricting embed URLs and build a web application with authentication to access the channels using the APIs provided by Watson Media.
 
 ## License
 
