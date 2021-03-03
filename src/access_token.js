@@ -1,0 +1,1 @@
+const access_token ="766747fbe65cac3c3687ebfe6122a4b4a25d45de";export default access_token;

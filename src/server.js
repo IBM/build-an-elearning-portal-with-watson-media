@@ -1,5 +1,7 @@
 const express = require('express')
 const request = require('request')
+var https = require('https')
+const axios = require('axios')
 const fs = require('fs')
 const bodyParser = require("body-parser");
 const NodeCache = require( "node-cache" );
@@ -21,16 +23,34 @@ app.get('/get_token', function(request, response) {
     var status = myCache.set( "myKey", obj, 86400);
     console.log(status)
     console.log(myCache.get('myKey'))
-    const content = `const access_token ="${token}";export default access_token;`
     console.log(token)
-    fs.writeFile('./access_token.js', content, err => {
-        if (err) {
-            console.error(err)
-            return
-        }
-    })
     response.writeHead(301,{Location: 'http://'+request.headers.host+'/login'});
     response.end();
+})
+
+app.get('/fetchPlaylists', function(request, response) {
+    var id = request.query.id
+
+    var config = {
+        method: 'get',
+        url: `https://api.video.ibm.com/channels/${id}/playlists.json`,
+        headers: { 
+            'Authorization': 'Bearer ' + myCache.get('myKey').access_token,
+            'Content-Type': 'application/x-www-form-urlencoded', 
+            'Access-Control-Allow-Origin': '*'
+        }
+    }
+
+    axios(config)
+    .then(function (res) {
+        // console.log(JSON.stringify(res.data));
+        console.log('/fetchPlaylists returned')
+        response.json(res.data)
+    })
+    .catch(function (error) {
+        // console.log(error);
+        response.json("Some Error")
+    })
 })
 
 app.get('/getClientId',function(request,response){
