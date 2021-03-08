@@ -66,9 +66,11 @@ import back from './../../assets/background3.jpg'
     onChange = async (e)=>{
         console.log(e)
         this.setState({loading: true, selected: e.selectedItem.text, selectedItem: e.selectedItem})
-        await axios.get(`https://api.video.ibm.com/channels/${e.selectedItem.id}/playlists.json`,{headers: this.state.headers})
+
+        await axios.get(`http://${window.location.hostname}:${window.location.port}/fetchPlaylists/?id=${e.selectedItem.id}`)
         .then(res=>{
-            console.log(res)
+            console.log(Object.keys(res.data))
+            console.log(res.data["0"])
             const arr = Object.values(res.data.playlists)
                 const items = arr.map(item=>{
                     return({
@@ -78,15 +80,12 @@ import back from './../../assets/background3.jpg'
                 })
                 console.log("playlists", items)
                 this.setState({playlists: items})
-        }).catch(err=>{
+        })
+        .catch(err=>{
             console.log("nopr" ,err)
             console.log(this.state.playlists)
         })
 
-        await axios.get(`https://api.video.ibm.com/channels/${e.selectedItem.id}/videos.json`, {headers: this.state.headers})
-        .then(res=>{
-            console.log(res)
-        })
         this.setState({loading: false})
     }
 
@@ -146,18 +145,17 @@ import back from './../../assets/background3.jpg'
                                 <div className="bx--grid bx--grid--no-gutter bx--grid--full-width" style={{}}>
                                     <div className="bx--row landing-page__tab-content">
                                         <div className="bx--col-md-4 bx--col-lg-7">
-                                        <div style={{ maxWidth: 400 }}>
-                                            <Dropdown
-                                                id="default"
-                                                titleText="Channel List"
-                                                // helperText="This is some helper text"
-                                                label= {this.state.selected}
-                                                items={this.state.channelList}
-                                                itemToString={(item) => (item ? item.text : '')}
-                                                onChange={this.onChange}
-                                            />
-                                        </div><br/>
-                                        
+                                            <div style={{ maxWidth: 400 }}>
+                                                <Dropdown
+                                                    id="default"
+                                                    titleText="Channel List"
+                                                    // helperText="This is some helper text"
+                                                    label= {this.state.selected}
+                                                    items={this.state.channelList}
+                                                    itemToString={(item) => (item ? item.text : '')}
+                                                    onChange={this.onChange}
+                                                />
+                                            </div><br/>        
                                         </div>
                                     </div>
                                 </div>
