@@ -244,8 +244,8 @@ In this step you will learn to the use of Channel API for building custom UI and
 
   * After successfully logging in you can now view the different channels that you have created in Watson Media.
   ![dash](doc/src/images/dash.png)
-  >Note: If you see a spinner loading for a long amount of time it is probably because of CORS error. If you are using Chrome you can fix that using **Allow CORS** extension which can be added from this [link](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?utm_source=chrome-ntp-icon). Simply install and toggle it on by pressing the icon as shown in the image below.
-  ![Extension](doc/src/images/extension.png)
+  <!--Note: If you see a spinner loading for a long amount of time it is probably because of CORS error. If you are using Chrome you can fix that using **Allow CORS** extension which can be added from this [link](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?utm_source=chrome-ntp-icon). Simply install and toggle it on by pressing the icon as shown in the image below.
+  ![Extension](doc/src/images/extension.png) ->
 
 
   * Select the channel and you can view the videos and playlists uploaded in that channel.
